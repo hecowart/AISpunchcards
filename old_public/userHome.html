@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIS Events - Home</title>
+  <link rel="icon" href="assets/logo.png" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script type="module" src="/js/firebase/auth.js"></script>
+  <script type="module" src="/js/userProfile.js"></script>
+</head>
+
+<body>
+
+  <nav>
+    <button type="button" id="userProfileBtn"><img class="filter-white" src="/assets/user-circle-thin.svg" /></button>
+    <button type="button" id="signOutBtn">Logout</button>
+  </nav>
+  <a class="imgLink" href=""><img src="assets/logo.png"></a>
+
+  <div id="bodyContainer">
+    <div id="toggleEventList">
+      <button id="attendedToggle" class="toggleOn" onclick="toggle()">Attended</button>
+      <button id="upcomingToggle" onclick="toggle()">Upcoming</button>
+    </div>
+    <div class="eventListContainer" id="attendedContainer">
+      <h2>Attended Events</h2>
+      <div id="attendedProgress">
+        <h3>Total: 5/10</h3>
+        <div>
+          <p>2/4<br><span>Discover</span></p>
+          <p>0/3<br><span>Connect</span></p>
+          <p>1/2<br><span>Socialize</span></p>
+          <p>0/2<br><span>Learn</span></p>
+          <p>1/4<br><span>Serve</span></p>
+        </div>
+      </div>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="eventListContainer hidden" id="upcomingContainer">
+      <h2>Upcoming Events</h2>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+      <div class="eventCard">
+        <div class="eventInfo">
+          <h3>Event Name</h3>
+          <p>Event Location</p>
+          <p>Event Date</p>
+          <p>Event Time</p>
+        </div>
+        <div class="eventOpen">
+          <!-- <a href="viewEvent.html">Open</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggle() {
+      document.getElementById("attendedToggle").classList.toggle('toggleOn');
+      document.getElementById("upcomingToggle").classList.toggle('toggleOn');
+      document.getElementById("attendedContainer").classList.toggle('hidden');
+      document.getElementById("upcomingContainer").classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>
